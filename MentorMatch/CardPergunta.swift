@@ -16,14 +16,14 @@ struct CardPergunta: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .stroke(.black, lineWidth: 3)
+                .stroke(getNomeSimboloCor(categoria: categoria).2, lineWidth: 3)
                 .frame(width: .infinity, height: 150)
                 .foregroundColor(.white)
             
             VStack(alignment: .leading, spacing: 20) {
                 HStack {
-                    Image(systemName: getSimbolo(categoria: categoria))
-                    Text(getNome(categoria: categoria))
+                    Image(systemName: getNomeSimboloCor(categoria: categoria).1)
+                    Text(getNomeSimboloCor(categoria: categoria).0)
                         .fontWeight(.semibold
                         )
                     
@@ -31,10 +31,12 @@ struct CardPergunta: View {
                 
                 HStack {
                     Text(texto)
+                        .font(.system(size: 25))
                         .fontWeight(.bold)
-                    .lineLimit(2)
+                        .lineLimit(2)
                     Spacer()
                     Image(systemName: "arrowshape.forward.circle")
+                        .font(.system(size: 20))
                 }
                 
                 HStack {

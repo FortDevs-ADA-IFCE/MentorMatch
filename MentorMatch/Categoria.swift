@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Categoria {
     case portugues
@@ -23,64 +24,33 @@ enum Categoria {
     case programacao
 }
 
-func getSimbolo(categoria: Categoria) -> String {
+func getNomeSimboloCor(categoria: Categoria) -> (String, String, Color) {
     switch categoria {
     case .portugues:
-        return "highlighter"
+        return ("Português", "highlighter", .portugues)
     case .matematica:
-        return "x.squareroot"
+        return ("Matemática", "x.squareroot", .matematica)
     case .literatura:
-        return "book"
+        return ("Literatura", "book", .literatura)
     case .historia:
-        return "hourglass"
+        return ("História", "hourglass", .historia)
     case .geografia:
-        return "globe"
+        return ("Geografia", "globe", .geografia)
     case .fisica:
-        return "atom"
+        return ("Física", "atom", .fisica)
     case .quimica:
-        return "flask"
+        return ("Química", "flask", .quimica)
     case .biologia:
-        return "leaf"
+        return ("Biologia", "leaf", .biologia)
     case .filosofia:
-        return "brain"
+        return ("Filosofia", "brain", .filosofia)
     case .sociologia:
-        return "person.3"
+        return ("Sociologia", "person.3", .sociologia)
     case .artes:
-        return "paintpalette"
+        return ("Artes", "paintpalette", .artes)
     case .ingles:
-        return "ellipsis.bubble.fill"
+        return ("Inglês", "ellipsis.bubble.fill", .ingles)
     case .programacao:
-        return "laptopcomputer"
-    }
-}
-
-func getNome(categoria: Categoria) -> String {
-    switch categoria {
-    case .portugues:
-        return "Português"
-    case .matematica:
-        return "Matemática"
-    case .literatura:
-        return "Literatura"
-    case .historia:
-        return "História"
-    case .geografia:
-        return "Geografia"
-    case .fisica:
-        return "Física"
-    case .quimica:
-        return "Química"
-    case .biologia:
-        return "Biologia"
-    case .filosofia:
-        return "Filosofia"
-    case .sociologia:
-        return "Sociologia"
-    case .artes:
-        return "Artes"
-    case .ingles:
-        return "Inglês"
-    case .programacao:
-        return "Programação"
+        return ("Programação", "laptopcomputer", .programacao)
     }
 }
