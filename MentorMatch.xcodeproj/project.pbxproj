@@ -26,7 +26,7 @@
 		3C27DB0F2AF5118C00CFF5B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3C27DB112AF5118F00CFF5B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C27DB142AF5118F00CFF5B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3C858E292AFE99D00002FCA4 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Feed.swift; path = ../Feed.swift; sourceTree = "<group>"; };
+		3C858E292AFE99D00002FCA4 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		3C858E2D2AFEA76A0002FCA4 /* ListaCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCards.swift; sourceTree = "<group>"; };
 		3CEE0C962AF521BA00EA8F03 /* TelaCarregamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaCarregamento.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,10 +64,7 @@
 				3C27DB0D2AF5118C00CFF5B9 /* MentorMatchApp.swift */,
 				3CEE0C962AF521BA00EA8F03 /* TelaCarregamento.swift */,
 				3C27DB0F2AF5118C00CFF5B9 /* ContentView.swift */,
-				3C858E292AFE99D00002FCA4 /* Feed.swift */,
-				3C06B5552AFAA04C000AC50B /* CardPergunta.swift */,
-				3C858E2D2AFEA76A0002FCA4 /* ListaCards.swift */,
-				3C06B5572AFAA170000AC50B /* Categoria.swift */,
+				3C858E2F2AFEAFB40002FCA4 /* Feed */,
 				3C27DB112AF5118F00CFF5B9 /* Assets.xcassets */,
 				3C27DB132AF5118F00CFF5B9 /* Preview Content */,
 			);
@@ -80,6 +77,17 @@
 				3C27DB142AF5118F00CFF5B9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3C858E2F2AFEAFB40002FCA4 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				3C858E292AFE99D00002FCA4 /* Feed.swift */,
+				3C06B5552AFAA04C000AC50B /* CardPergunta.swift */,
+				3C858E2D2AFEA76A0002FCA4 /* ListaCards.swift */,
+				3C06B5572AFAA170000AC50B /* Categoria.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
