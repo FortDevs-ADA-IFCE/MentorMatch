@@ -8,17 +8,12 @@
 import SwiftUI
 
 struct Feed: View {
+   
+    
     var body: some View {
-        NavigationStack {
-            ZStack {
-                
-                    
-            }
-            .navigationTitle("MentorMatch")
-            .navigationBarTitleDisplayMode(.inline)
-            
+        VStack {
+            Text("Hello World")
         }
-        
     }
 }
 
