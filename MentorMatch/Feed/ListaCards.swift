@@ -12,7 +12,7 @@ struct ListaCards: View {
         CardPergunta(categoria: .quimica, autor: "Joel", texto: "Qual o elemento químico que contém 8 prótons?", data: Date.now),
         CardPergunta(categoria: .portugues, autor: "Guilherme", texto: "Qual a conjugação do verbo 'agir'?", data: Date.now),
         CardPergunta(categoria: .matematica, autor: "Melissa", texto: "Como se calcula uma integral?", data: Date.now),
-        CardPergunta(categoria: .historia, autor: "Rafael", texto: "Quem descobriu o Brasil?", data: Date.now),
+        CardPergunta(categoria: .historia, autor: "Rafael", texto: "Quem descobriu o Brasil? ", data: Date.now),
         CardPergunta(categoria: .filosofia, autor: "Ana", texto: "Qual é a escola de pensamento de Platão?", data: Date.now)
     ]
     
@@ -25,8 +25,8 @@ struct ListaCards: View {
                 .listRowSeparator(.hidden)
                 .listRowBackground(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(getNomeSimboloCor(categoria: pergunta.categoria).2, lineWidth: 3)
-                        .frame(width: .infinity, height: 150)
+                        .strokeBorder(getNomeSimboloCor(categoria: pergunta.categoria).2, lineWidth: 3)
+                        .frame(maxWidth: .infinity, maxHeight: 150)
                         .foregroundColor(.white)
                         .padding(
                             EdgeInsets(
