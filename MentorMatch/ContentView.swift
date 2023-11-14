@@ -14,6 +14,14 @@ struct ContentView: View {
                 .tabItem {
                     Label("Feed", systemImage: "house")
                 }
+            PopQuiz()
+                .tabItem {
+                    Label("Pop Quiz", systemImage: "bolt")
+                }
+            Perfil()
+                .tabItem {
+                    Label("Perfil", systemImage: "person")
+                }
         }
     }
 }
