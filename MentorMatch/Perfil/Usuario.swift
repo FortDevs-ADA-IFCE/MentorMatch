@@ -5,9 +5,11 @@
 //  Created by Joel Lacerda on 14/11/23.
 //
 
-import Foundation
+import SwiftUI
 
 struct Usuario {
     let nome: String
     var email: String
+    var categoriasSelecionadas: [String] = []
+    var perguntasEnviadas: [String] = []
 }

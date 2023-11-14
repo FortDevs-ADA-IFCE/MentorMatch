@@ -45,10 +45,10 @@ struct CardPergunta: View, Hashable, Identifiable {
 #Preview {
     ZStack {
         RoundedRectangle(cornerRadius: 10)
-            .stroke(.quimica, lineWidth: 3)
+            .stroke(.química, lineWidth: 3)
             .frame(width: .infinity, height: 150)
             .foregroundColor(.white)
-        CardPergunta(categoria: .quimica, autor: "Joel", texto: "Qual o elemento químico que contém 8 prótons?", data: Date.now)
+        CardPergunta(categoria: .química, autor: "Joel", texto: "Qual o elemento químico que contém 8 prótons?", data: Date.now)
             .padding(10)
     }
     .padding(10)

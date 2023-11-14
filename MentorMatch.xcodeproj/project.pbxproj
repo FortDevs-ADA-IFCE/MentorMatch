@@ -16,8 +16,10 @@
 		3C5723F32B03D7C8003CEE0D /* PopQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5723F22B03D7C8003CEE0D /* PopQuiz.swift */; };
 		3C5723F62B03D876003CEE0D /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5723F52B03D876003CEE0D /* Perfil.swift */; };
 		3C5723F82B03DA50003CEE0D /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5723F72B03DA50003CEE0D /* Usuario.swift */; };
+		3C5723FA2B03E0C9003CEE0D /* Categorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5723F92B03E0C9003CEE0D /* Categorias.swift */; };
+		3C5723FF2B03ED26003CEE0D /* NovaPergunta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5723FE2B03ED26003CEE0D /* NovaPergunta.swift */; };
 		3C858E2A2AFE99D00002FCA4 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C858E292AFE99D00002FCA4 /* Feed.swift */; };
-		3C858E2E2AFEA76A0002FCA4 /* ListaCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C858E2D2AFEA76A0002FCA4 /* ListaCards.swift */; };
+		3C858E2E2AFEA76A0002FCA4 /* ListaCardsPergunta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C858E2D2AFEA76A0002FCA4 /* ListaCardsPergunta.swift */; };
 		3CEE0C972AF521BA00EA8F03 /* TelaCarregamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE0C962AF521BA00EA8F03 /* TelaCarregamento.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,8 +34,10 @@
 		3C5723F22B03D7C8003CEE0D /* PopQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopQuiz.swift; sourceTree = "<group>"; };
 		3C5723F52B03D876003CEE0D /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
 		3C5723F72B03DA50003CEE0D /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		3C5723F92B03E0C9003CEE0D /* Categorias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categorias.swift; sourceTree = "<group>"; };
+		3C5723FE2B03ED26003CEE0D /* NovaPergunta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaPergunta.swift; sourceTree = "<group>"; };
 		3C858E292AFE99D00002FCA4 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
-		3C858E2D2AFEA76A0002FCA4 /* ListaCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCards.swift; sourceTree = "<group>"; };
+		3C858E2D2AFEA76A0002FCA4 /* ListaCardsPergunta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCardsPergunta.swift; sourceTree = "<group>"; };
 		3CEE0C962AF521BA00EA8F03 /* TelaCarregamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaCarregamento.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +104,7 @@
 			children = (
 				3C5723F52B03D876003CEE0D /* Perfil.swift */,
 				3C5723F72B03DA50003CEE0D /* Usuario.swift */,
+				3C5723F92B03E0C9003CEE0D /* Categorias.swift */,
 			);
 			path = Perfil;
 			sourceTree = "<group>";
@@ -109,8 +114,9 @@
 			children = (
 				3C858E292AFE99D00002FCA4 /* Feed.swift */,
 				3C06B5552AFAA04C000AC50B /* CardPergunta.swift */,
-				3C858E2D2AFEA76A0002FCA4 /* ListaCards.swift */,
+				3C858E2D2AFEA76A0002FCA4 /* ListaCardsPergunta.swift */,
 				3C06B5572AFAA170000AC50B /* Categoria.swift */,
+				3C5723FE2B03ED26003CEE0D /* NovaPergunta.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -189,8 +195,10 @@
 				3C06B5562AFAA04C000AC50B /* CardPergunta.swift in Sources */,
 				3C858E2A2AFE99D00002FCA4 /* Feed.swift in Sources */,
 				3C5723F62B03D876003CEE0D /* Perfil.swift in Sources */,
-				3C858E2E2AFEA76A0002FCA4 /* ListaCards.swift in Sources */,
+				3C858E2E2AFEA76A0002FCA4 /* ListaCardsPergunta.swift in Sources */,
 				3C27DB102AF5118C00CFF5B9 /* ContentView.swift in Sources */,
+				3C5723FA2B03E0C9003CEE0D /* Categorias.swift in Sources */,
+				3C5723FF2B03ED26003CEE0D /* NovaPergunta.swift in Sources */,
 				3C06B5582AFAA170000AC50B /* Categoria.swift in Sources */,
 				3C27DB0E2AF5118C00CFF5B9 /* MentorMatchApp.swift in Sources */,
 				3C5723F82B03DA50003CEE0D /* Usuario.swift in Sources */,
