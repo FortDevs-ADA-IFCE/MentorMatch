@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct Feed: View {
+    @State private var showingSheet = false
+    
     var body: some View {
         NavigationStack {
-            ListaCards()
+            ListaCardsPergunta()
             .navigationTitle("Feed")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Button {
-                    
+                    showingSheet.toggle()
                 } label: {
                     Image(systemName: "plus")
+                }
+                .sheet(isPresented: $showingSheet) {
+                    NovaPergunta()
                 }
             }
         }

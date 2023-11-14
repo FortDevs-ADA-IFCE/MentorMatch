@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct Perfil: View {
+    let usuario = Usuario(nome: "Joel Lacerda", email: "joellacerdaol@gmail.com")
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            Form {
+                Section {
+                    Text(usuario.nome)
+                    Text(usuario.email)
+                }
+                Section {
+                    NavigationLink("Categorias") {
+                        Categorias()
+                    }
+                }
+                Section {
+                    NavigationLink("Perguntas enviadas") {
+                        
+                    }
+                }
+            }
+            .navigationTitle("Perfil")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
