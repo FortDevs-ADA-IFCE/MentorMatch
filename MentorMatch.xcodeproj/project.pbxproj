@@ -13,6 +13,9 @@
 		3C27DB102AF5118C00CFF5B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27DB0F2AF5118C00CFF5B9 /* ContentView.swift */; };
 		3C27DB122AF5118F00CFF5B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C27DB112AF5118F00CFF5B9 /* Assets.xcassets */; };
 		3C27DB152AF5118F00CFF5B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C27DB142AF5118F00CFF5B9 /* Preview Assets.xcassets */; };
+		3C5723F32B03D7C8003CEE0D /* PopQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5723F22B03D7C8003CEE0D /* PopQuiz.swift */; };
+		3C5723F62B03D876003CEE0D /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5723F52B03D876003CEE0D /* Perfil.swift */; };
+		3C5723F82B03DA50003CEE0D /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5723F72B03DA50003CEE0D /* Usuario.swift */; };
 		3C858E2A2AFE99D00002FCA4 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C858E292AFE99D00002FCA4 /* Feed.swift */; };
 		3C858E2E2AFEA76A0002FCA4 /* ListaCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C858E2D2AFEA76A0002FCA4 /* ListaCards.swift */; };
 		3CEE0C972AF521BA00EA8F03 /* TelaCarregamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE0C962AF521BA00EA8F03 /* TelaCarregamento.swift */; };
@@ -26,6 +29,9 @@
 		3C27DB0F2AF5118C00CFF5B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3C27DB112AF5118F00CFF5B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C27DB142AF5118F00CFF5B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3C5723F22B03D7C8003CEE0D /* PopQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopQuiz.swift; sourceTree = "<group>"; };
+		3C5723F52B03D876003CEE0D /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
+		3C5723F72B03DA50003CEE0D /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		3C858E292AFE99D00002FCA4 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		3C858E2D2AFEA76A0002FCA4 /* ListaCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCards.swift; sourceTree = "<group>"; };
 		3CEE0C962AF521BA00EA8F03 /* TelaCarregamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaCarregamento.swift; sourceTree = "<group>"; };
@@ -65,6 +71,8 @@
 				3CEE0C962AF521BA00EA8F03 /* TelaCarregamento.swift */,
 				3C27DB0F2AF5118C00CFF5B9 /* ContentView.swift */,
 				3C858E2F2AFEAFB40002FCA4 /* Feed */,
+				3C5723F12B03D78F003CEE0D /* PopQuiz */,
+				3C5723F42B03D865003CEE0D /* Perfil */,
 				3C27DB112AF5118F00CFF5B9 /* Assets.xcassets */,
 				3C27DB132AF5118F00CFF5B9 /* Preview Content */,
 			);
@@ -77,6 +85,23 @@
 				3C27DB142AF5118F00CFF5B9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3C5723F12B03D78F003CEE0D /* PopQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				3C5723F22B03D7C8003CEE0D /* PopQuiz.swift */,
+			);
+			path = PopQuiz;
+			sourceTree = "<group>";
+		};
+		3C5723F42B03D865003CEE0D /* Perfil */ = {
+			isa = PBXGroup;
+			children = (
+				3C5723F52B03D876003CEE0D /* Perfil.swift */,
+				3C5723F72B03DA50003CEE0D /* Usuario.swift */,
+			);
+			path = Perfil;
 			sourceTree = "<group>";
 		};
 		3C858E2F2AFEAFB40002FCA4 /* Feed */ = {
@@ -160,12 +185,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C5723F32B03D7C8003CEE0D /* PopQuiz.swift in Sources */,
 				3C06B5562AFAA04C000AC50B /* CardPergunta.swift in Sources */,
 				3C858E2A2AFE99D00002FCA4 /* Feed.swift in Sources */,
+				3C5723F62B03D876003CEE0D /* Perfil.swift in Sources */,
 				3C858E2E2AFEA76A0002FCA4 /* ListaCards.swift in Sources */,
 				3C27DB102AF5118C00CFF5B9 /* ContentView.swift in Sources */,
 				3C06B5582AFAA170000AC50B /* Categoria.swift in Sources */,
 				3C27DB0E2AF5118C00CFF5B9 /* MentorMatchApp.swift in Sources */,
+				3C5723F82B03DA50003CEE0D /* Usuario.swift in Sources */,
 				3CEE0C972AF521BA00EA8F03 /* TelaCarregamento.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
