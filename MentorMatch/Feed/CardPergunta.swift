@@ -17,8 +17,8 @@ struct CardPergunta: View, Hashable, Identifiable {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
-                Image(systemName: getNomeSimboloCor(categoria: categoria).1)
-                Text(getNomeSimboloCor(categoria: categoria).0)
+                Image(systemName: getSimbolo(categoria))
+                Text(getNome(categoria))
                     .fontWeight(.semibold
                     )
                 
@@ -45,10 +45,10 @@ struct CardPergunta: View, Hashable, Identifiable {
 #Preview {
     ZStack {
         RoundedRectangle(cornerRadius: 10)
-            .stroke(.química, lineWidth: 3)
+            .stroke(.quimica, lineWidth: 3)
             .frame(width: .infinity, height: 150)
             .foregroundColor(.white)
-        CardPergunta(categoria: .química, autor: "Joel", texto: "Qual o elemento químico que contém 8 prótons?", data: Date.now)
+        CardPergunta(categoria: .quimica, autor: "Joel", texto: "Qual o elemento químico que contém 8 prótons?", data: Date.now)
             .padding(10)
     }
     .padding(10)

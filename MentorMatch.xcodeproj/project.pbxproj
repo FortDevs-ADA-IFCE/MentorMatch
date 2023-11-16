@@ -21,6 +21,7 @@
 		3C858E2A2AFE99D00002FCA4 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C858E292AFE99D00002FCA4 /* Feed.swift */; };
 		3C858E2E2AFEA76A0002FCA4 /* ListaCardsPergunta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C858E2D2AFEA76A0002FCA4 /* ListaCardsPergunta.swift */; };
 		3CEE0C972AF521BA00EA8F03 /* TelaCarregamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE0C962AF521BA00EA8F03 /* TelaCarregamento.swift */; };
+		3CFCFB062B06BC1600DEEBF5 /* ItemCategoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFCFB052B06BC1600DEEBF5 /* ItemCategoria.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		3C858E292AFE99D00002FCA4 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		3C858E2D2AFEA76A0002FCA4 /* ListaCardsPergunta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCardsPergunta.swift; sourceTree = "<group>"; };
 		3CEE0C962AF521BA00EA8F03 /* TelaCarregamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaCarregamento.swift; sourceTree = "<group>"; };
+		3CFCFB052B06BC1600DEEBF5 /* ItemCategoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoria.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				3C5723F52B03D876003CEE0D /* Perfil.swift */,
 				3C5723F72B03DA50003CEE0D /* Usuario.swift */,
 				3C5723F92B03E0C9003CEE0D /* Categorias.swift */,
+				3CFCFB052B06BC1600DEEBF5 /* ItemCategoria.swift */,
 			);
 			path = Perfil;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				3C858E2A2AFE99D00002FCA4 /* Feed.swift in Sources */,
 				3C5723F62B03D876003CEE0D /* Perfil.swift in Sources */,
 				3C858E2E2AFEA76A0002FCA4 /* ListaCardsPergunta.swift in Sources */,
+				3CFCFB062B06BC1600DEEBF5 /* ItemCategoria.swift in Sources */,
 				3C27DB102AF5118C00CFF5B9 /* ContentView.swift in Sources */,
 				3C5723FA2B03E0C9003CEE0D /* Categorias.swift in Sources */,
 				3C5723FF2B03ED26003CEE0D /* NovaPergunta.swift in Sources */,
