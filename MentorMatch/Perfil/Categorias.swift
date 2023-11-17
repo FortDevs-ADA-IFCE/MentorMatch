@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct Categorias: View {
-    let categorias: [Categoria] = [.artes, .biologia, .filosofia, .fisica, .geografia, .historia, .ingles, .literatura, .matematica, .portugues, .programacao, .quimica, .sociologia]
-    @State private var isSelected = false
-    
     var body: some View {
         List {
             ForEach(categorias) { categoria in

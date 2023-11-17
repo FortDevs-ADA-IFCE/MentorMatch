@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct NovaPergunta: View {
-    let categorias: [Categoria] = [.artes, .biologia, .filosofia, .fisica, .geografia, .historia, .ingles, .literatura, .matematica, .portugues, .programacao, .quimica, .sociologia]
-    
     @Environment(\.dismiss) var dismiss
 
     @State private var categoriaSelecionada: Categoria = .portugues
@@ -17,19 +15,32 @@ struct NovaPergunta: View {
 
     var body: some View {
         Form {
-            Picker("Selecione uma categoria", selection: $categoriaSelecionada) {
+            Picker("Categoria", selection: $categoriaSelecionada) {
                 ForEach(categorias, id: \.self) { categoria in
                     Text(getNome(categoria))
                 }
             }
-            Section {
+            
+            Section("Pergunta") {
                 TextField("Digite aqui sua pergunta", text: $pergunta, axis: .vertical)
                     .lineLimit(5...10)
             }
             
+            Section {
+                Button("Publicar pergunta") {
+                    dismiss()
+                }
+                .disabled(pergunta == "" ? true : false)
+            }
+            
+            Section {
+                Button("Voltar") {
+                    dismiss()
+                }
+            }
         }
-        Button("Enviar") {
-            dismiss()
+        .onTapGesture {
+            hideKeyboard()
         }
     }
 }

@@ -12,7 +12,7 @@ struct ContentView: View {
         TabView {
             Feed()
                 .tabItem {
-                    Label("Feed", systemImage: "house")
+                    Label("Início", systemImage: "house")
                 }
             PopQuiz()
                 .tabItem {

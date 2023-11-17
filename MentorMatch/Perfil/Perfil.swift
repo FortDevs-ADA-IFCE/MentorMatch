@@ -29,7 +29,7 @@ struct Perfil: View {
                 }
             }
             .navigationTitle("Perfil")
-            .navigationBarTitleDisplayMode(.inline)
+
         }
     }
 }

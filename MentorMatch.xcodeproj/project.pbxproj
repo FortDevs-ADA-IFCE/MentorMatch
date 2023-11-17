@@ -20,6 +20,7 @@
 		3C5723FF2B03ED26003CEE0D /* NovaPergunta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5723FE2B03ED26003CEE0D /* NovaPergunta.swift */; };
 		3C858E2A2AFE99D00002FCA4 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C858E292AFE99D00002FCA4 /* Feed.swift */; };
 		3C858E2E2AFEA76A0002FCA4 /* ListaCardsPergunta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C858E2D2AFEA76A0002FCA4 /* ListaCardsPergunta.swift */; };
+		3C9E68532B07E74E007EB1B8 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E68522B07E74E007EB1B8 /* SwiftUIView.swift */; };
 		3CEE0C972AF521BA00EA8F03 /* TelaCarregamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE0C962AF521BA00EA8F03 /* TelaCarregamento.swift */; };
 		3CFCFB062B06BC1600DEEBF5 /* ItemCategoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFCFB052B06BC1600DEEBF5 /* ItemCategoria.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		3C5723FE2B03ED26003CEE0D /* NovaPergunta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaPergunta.swift; sourceTree = "<group>"; };
 		3C858E292AFE99D00002FCA4 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		3C858E2D2AFEA76A0002FCA4 /* ListaCardsPergunta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCardsPergunta.swift; sourceTree = "<group>"; };
+		3C9E68522B07E74E007EB1B8 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		3CEE0C962AF521BA00EA8F03 /* TelaCarregamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaCarregamento.swift; sourceTree = "<group>"; };
 		3CFCFB052B06BC1600DEEBF5 /* ItemCategoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoria.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +81,7 @@
 				3C858E2F2AFEAFB40002FCA4 /* Feed */,
 				3C5723F12B03D78F003CEE0D /* PopQuiz */,
 				3C5723F42B03D865003CEE0D /* Perfil */,
+				3C9E68512B07E734007EB1B8 /* Extensions */,
 				3C27DB112AF5118F00CFF5B9 /* Assets.xcassets */,
 				3C27DB132AF5118F00CFF5B9 /* Preview Content */,
 			);
@@ -122,6 +125,14 @@
 				3C5723FE2B03ED26003CEE0D /* NovaPergunta.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		3C9E68512B07E734007EB1B8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C9E68522B07E74E007EB1B8 /* SwiftUIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				3CFCFB062B06BC1600DEEBF5 /* ItemCategoria.swift in Sources */,
 				3C27DB102AF5118C00CFF5B9 /* ContentView.swift in Sources */,
 				3C5723FA2B03E0C9003CEE0D /* Categorias.swift in Sources */,
+				3C9E68532B07E74E007EB1B8 /* SwiftUIView.swift in Sources */,
 				3C5723FF2B03ED26003CEE0D /* NovaPergunta.swift in Sources */,
 				3C06B5582AFAA170000AC50B /* Categoria.swift in Sources */,
 				3C27DB0E2AF5118C00CFF5B9 /* MentorMatchApp.swift in Sources */,
