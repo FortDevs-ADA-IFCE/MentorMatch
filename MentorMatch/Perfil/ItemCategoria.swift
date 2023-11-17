@@ -18,6 +18,7 @@ struct ItemCategoria: View {
             Spacer()
             Image(systemName: getSimbolo(categoria))
                 .foregroundStyle(isSelected ? .blue : .primary)
+//                .padding(.trailing, 10)
         }
         .onTapGesture {
             isSelected.toggle()

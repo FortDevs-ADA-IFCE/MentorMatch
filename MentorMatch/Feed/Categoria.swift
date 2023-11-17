@@ -25,6 +25,8 @@ enum Categoria: CaseIterable, Identifiable {
     var id: Self { self }
 }
 
+let categorias: [Categoria] = [.artes, .biologia, .filosofia, .fisica, .geografia, .historia, .ingles, .literatura, .matematica, .portugues, .programacao, .quimica, .sociologia]
+
 func getInfo(_ categoria: Categoria) -> (String, String, Color) {
     switch categoria {
     case .portugues:

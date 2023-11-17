@@ -13,8 +13,7 @@ struct Feed: View {
     var body: some View {
         NavigationStack {
             ListaCardsPergunta()
-            .navigationTitle("Feed")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Início")
             .toolbar {
                 Button {
                     showingSheet.toggle()
