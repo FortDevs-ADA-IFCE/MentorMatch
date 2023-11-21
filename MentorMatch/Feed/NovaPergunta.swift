@@ -23,7 +23,7 @@ struct NovaPergunta: View {
             
             Section("Pergunta") {
                 TextField("Digite aqui sua pergunta", text: $pergunta, axis: .vertical)
-                    .lineLimit(5...10)
+            
             }
             
             Section {
@@ -31,12 +31,6 @@ struct NovaPergunta: View {
                     dismiss()
                 }
                 .disabled(pergunta == "" ? true : false)
-            }
-            
-            Section {
-                Button("Voltar") {
-                    dismiss()
-                }
             }
         }
         .onTapGesture {

@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct CardPergunta: View, Hashable, Identifiable {
+struct CardPergunta: View, Identifiable {
     let id = UUID()
     let categoria: Categoria
     let autor: String
     let texto: String
-    let data: Date
+    let data: Date = Date.now
+    var respostas: [CardResposta] = []
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -29,7 +30,6 @@ struct CardPergunta: View, Hashable, Identifiable {
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .lineLimit(2)
-                Spacer()
             }
             
             HStack {
@@ -48,8 +48,9 @@ struct CardPergunta: View, Hashable, Identifiable {
             .stroke(.quimica, lineWidth: 3)
             .frame(width: .infinity, height: 150)
             .foregroundColor(.white)
-        CardPergunta(categoria: .quimica, autor: "Joel", texto: "Qual o elemento químico que contém 8 prótons?", data: Date.now)
+        CardPergunta(categoria: .quimica, autor: "Joel", texto: "Qual o elemento químico que contém 8 prótons?")
             .padding(10)
     }
     .padding(10)
 }
+
