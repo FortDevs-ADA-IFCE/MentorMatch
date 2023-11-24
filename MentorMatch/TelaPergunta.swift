@@ -10,10 +10,11 @@ import SwiftUI
 struct TelaPergunta: View {
     static var respostasPerguntaQuimica: [CardResposta] = [
         CardResposta(autor: "Fulano", texto: "Esse elemento é o oxigênio.", data: Date.now),
-        CardResposta(autor: "Sicrano", texto: "Oxigênio.", data: Date.now)
+        CardResposta(autor: "Sicrano", texto: "Oxigênio.", data: Date.now),
+        CardResposta(autor: "Beltrano", texto: "\nNova linha\nNova linha\nNova linha\nNova linha.", data: Date.now)
     ]
-    
-    static var perguntas: [CardPergunta] = [
+
+    @State var perguntas: [CardPergunta] = [
         CardPergunta(categoria: .quimica, autor: "Joel", texto: "Qual o elemento químico que contém 8 prótons?", respostas: respostasPerguntaQuimica),
         CardPergunta(categoria: .portugues, autor: "Guilherme", texto: "Qual a conjugação do verbo 'agir'?"),
         CardPergunta(categoria: .matematica, autor: "Melissa", texto: "Como se calcula uma integral?"),
@@ -21,7 +22,10 @@ struct TelaPergunta: View {
         CardPergunta(categoria: .filosofia, autor: "Ana", texto: "Qual é a escola de pensamento de Platão?")
     ]
     
-    var pergunta = perguntas[0]
+    var pergunta: CardPergunta { perguntas[0] }
+    
+    @State private var digitandoPergunta = false
+    @State private var novaResposta = ""
     
     var body: some View {
         List {
@@ -32,30 +36,30 @@ struct TelaPergunta: View {
             ForEach(pergunta.respostas, id: \.id) { resposta in
                 resposta
             }
-            .listRowSeparator(.hidden)
-            .listRowBackground(
-                RoundedRectangle(cornerRadius: 10)
-                    .strokeBorder(.programacao, lineWidth: 2)
-                    .frame(maxWidth: .infinity, maxHeight: 150)
-                    .foregroundColor(.white)
-                    .padding(
-                        EdgeInsets(
-                            top: 2,
-                            leading: 10,
-                            bottom: 2,
-                            trailing: 10
-                        )
-                    )
-            )
+            .listRowSeparator(.hidden)           
             
             Section {
-                Button(action: {}) {
-                    Text("Adicionar resposta")
-                        .font(.system(size: 16))
-                        .fontWeight(.bold)
-                        .foregroundColor(.primary)
+                if !digitandoPergunta {
+                    Button(action: {digitandoPergunta = true}) {
+                        Text("Adicionar resposta")
+                            .font(.system(size: 16))
+                            .fontWeight(.bold)
+                            .foregroundColor(.primary)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: 30)
+                } else {
+                    TextField("Digite aqui sua resposta", text: $novaResposta, axis: .vertical)
+                    Button("Enviar") {
+                        let novaResposta = CardResposta(autor: "Autor", texto: novaResposta, data: Date.now)
+                        TelaPergunta.respostasPerguntaQuimica.append(novaResposta)
+                        if let index = perguntas.firstIndex(where: { $0.id == pergunta.id}) {
+                            perguntas[index].respostas.append(novaResposta)
+                        }
+                        
+                        self.novaResposta = ""
+                        digitandoPergunta = false
+                    }
                 }
-                .frame(maxWidth: .infinity, maxHeight: 30)
             }
         }
         .listRowSpacing(10)
