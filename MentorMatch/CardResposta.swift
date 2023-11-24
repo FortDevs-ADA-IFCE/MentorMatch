@@ -26,7 +26,6 @@ struct CardResposta: View, Identifiable {
                 Text(texto)
                     .font(.system(size: 18))
                     .fontWeight(.bold)
-                .lineLimit(4)
             }
             
             HStack {
@@ -40,12 +39,10 @@ struct CardResposta: View, Identifiable {
 
 #Preview {
     ZStack {
-        RoundedRectangle(cornerRadius: 10)
-            .stroke(.black, lineWidth: 2)
-            .frame(width: .infinity, height: 150)
-            .foregroundColor(.white)
+        
         CardResposta(autor: "Joel", texto: "Esse elemento é o oxigênio.", data: Date.now)
             .padding(10)
+            .border(Color.black)
     }
     .padding(10)
 }

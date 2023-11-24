@@ -10,9 +10,10 @@ import SwiftUI
 struct ListaCardsPergunta: View {
     static var respostasPerguntaQuimica: [CardResposta] = [
         CardResposta(autor: "Fulano", texto: "Esse elemento é o oxigênio.", data: Date.now),
-        CardResposta(autor: "Sicrano", texto: "Oxigênio.", data: Date.now)
+        CardResposta(autor: "Sicrano", texto: "Oxigênio.", data: Date.now),
+        CardResposta(autor: "Beltrano", texto: "\nNova linha\nNova linha\nNova linha\nNova linha.", data: Date.now)
     ]
-    
+
     var perguntas: [CardPergunta] = [
         CardPergunta(categoria: .quimica, autor: "Joel", texto: "Qual o elemento químico que contém 8 prótons?", respostas: respostasPerguntaQuimica),
         CardPergunta(categoria: .portugues, autor: "Guilherme", texto: "Qual a conjugação do verbo 'agir'?"),
@@ -24,7 +25,7 @@ struct ListaCardsPergunta: View {
     var body: some View {
         List {
             ForEach(perguntas, id: \.id) { pergunta in
-                NavigationLink(destination: TelaPergunta(pergunta: pergunta)) {
+                NavigationLink(destination: TelaPergunta(perguntas: perguntas)) {
                     pergunta
                 }
                 .listRowSeparator(.hidden)
