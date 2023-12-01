@@ -1,5 +1,5 @@
 //
-//  CardResposta.swift
+//  RespostaView.swift
 //  MentorMatch
 //
 //  Created by Joel Lacerda on 17/11/23.
@@ -7,23 +7,21 @@
 
 import SwiftUI
 
-struct CardResposta: View, Identifiable {
+struct RespostaView: View, Identifiable {
     let id = UUID()
-    let autor: String
-    let texto: String
-    let data: Date
+    var resposta: Resposta
     
     var body: some View {
         VStack(alignment: .leading, spacing: 30) {
             HStack {
-                Text(data.formatted())
+                Text(resposta.data.formatted())
                 Spacer()
-                Text(autor)
+                Text(resposta.autor)
                     .font(.callout)
             }
             
             HStack {
-                Text(texto)
+                Text(resposta.texto)
                     .font(.system(size: 18))
                     .fontWeight(.bold)
             }
@@ -35,12 +33,12 @@ struct CardResposta: View, Identifiable {
             }
         }
     }
+
 }
 
 #Preview {
     ZStack {
-        
-        CardResposta(autor: "Joel", texto: "Esse elemento é o oxigênio.", data: Date.now)
+        RespostaView(resposta: Resposta(autor: "Joel", texto: "Esse elemento é o oxigênio."))
             .padding(10)
             .border(Color.black)
     }

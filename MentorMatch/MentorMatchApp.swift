@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct MentorMatchApp: App {
@@ -13,5 +14,6 @@ struct MentorMatchApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Pergunta.self)
     }
 }

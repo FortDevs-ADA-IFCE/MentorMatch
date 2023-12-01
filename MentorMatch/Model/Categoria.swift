@@ -7,25 +7,23 @@
 
 import SwiftUI
 
-enum Categoria: CaseIterable, Identifiable {
-    case portugues
-    case matematica
-    case literatura
-    case historia
-    case geografia
-    case fisica
-    case quimica
+enum Categoria: Codable, CaseIterable, Identifiable {
+    case artes
     case biologia
     case filosofia
-    case sociologia
-    case artes
+    case fisica
+    case geografia
+    case historia
     case ingles
+    case literatura
+    case matematica
+    case portugues
+    case quimica
+    case sociologia
     case programacao
     
     var id: Self { self }
 }
-
-let categorias: [Categoria] = [.artes, .biologia, .filosofia, .fisica, .geografia, .historia, .ingles, .literatura, .matematica, .portugues, .programacao, .quimica, .sociologia]
 
 func getInfo(_ categoria: Categoria) -> (String, String, Color) {
     switch categoria {

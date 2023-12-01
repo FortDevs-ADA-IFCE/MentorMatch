@@ -1,5 +1,5 @@
 //
-//  Categorias.swift
+//  ListaCategorias.swift
 //  MentorMatch
 //
 //  Created by Joel Lacerda on 14/11/23.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct Categorias: View {
+struct ListaCategorias: View {
     var body: some View {
         List {
-            ForEach(categorias) { categoria in
+            ForEach(Categoria.allCases) { categoria in
                ItemCategoria(categoria: categoria)
             }
         }
@@ -18,5 +18,5 @@ struct Categorias: View {
 }
 
 #Preview {
-    Categorias()
+    ListaCategorias()
 }

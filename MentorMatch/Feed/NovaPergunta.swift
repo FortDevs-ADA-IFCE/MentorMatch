@@ -6,31 +6,35 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct NovaPergunta: View {
     @Environment(\.dismiss) var dismiss
+    @Environment(\.modelContext) var modelContext
 
     @State private var categoriaSelecionada: Categoria = .portugues
-    @State private var pergunta: String = ""
+    @State private var textoDigitado: String = ""
 
     var body: some View {
         Form {
             Picker("Categoria", selection: $categoriaSelecionada) {
-                ForEach(categorias, id: \.self) { categoria in
+                ForEach(Categoria.allCases, id: \.self) { categoria in
                     Text(getNome(categoria))
                 }
             }
             
             Section("Pergunta") {
-                TextField("Digite aqui sua pergunta", text: $pergunta, axis: .vertical)
+                TextField("Digite aqui sua pergunta", text: $textoDigitado, axis: .vertical)
             
             }
             
             Section {
                 Button("Publicar pergunta") {
+                    modelContext.insert(Pergunta(categoria: categoriaSelecionada, texto: textoDigitado))
+                    textoDigitado = ""
                     dismiss()
                 }
-                .disabled(pergunta == "" ? true : false)
+                .disabled(textoDigitado == "" ? true : false)
             }
         }
         .onTapGesture {

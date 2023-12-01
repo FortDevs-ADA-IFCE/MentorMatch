@@ -6,23 +6,10 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct TelaPergunta: View {
-    static var respostasPerguntaQuimica: [CardResposta] = [
-        CardResposta(autor: "Fulano", texto: "Esse elemento é o oxigênio.", data: Date.now),
-        CardResposta(autor: "Sicrano", texto: "Oxigênio.", data: Date.now),
-        CardResposta(autor: "Beltrano", texto: "\nNova linha\nNova linha\nNova linha\nNova linha.", data: Date.now)
-    ]
-
-    @State var perguntas: [CardPergunta] = [
-        CardPergunta(categoria: .quimica, autor: "Joel", texto: "Qual o elemento químico que contém 8 prótons?", respostas: respostasPerguntaQuimica),
-        CardPergunta(categoria: .portugues, autor: "Guilherme", texto: "Qual a conjugação do verbo 'agir'?"),
-        CardPergunta(categoria: .matematica, autor: "Melissa", texto: "Como se calcula uma integral?"),
-        CardPergunta(categoria: .historia, autor: "Rafael", texto: "Quem descobriu o Brasil? "),
-        CardPergunta(categoria: .filosofia, autor: "Ana", texto: "Qual é a escola de pensamento de Platão?")
-    ]
-    
-    var pergunta: CardPergunta { perguntas[0] }
+    var pergunta: Pergunta
     
     @State private var digitandoPergunta = false
     @State private var novaResposta = ""
@@ -30,11 +17,11 @@ struct TelaPergunta: View {
     var body: some View {
         List {
             Section {
-                pergunta
+                PerguntaView(card: pergunta)
             }
             
             ForEach(pergunta.respostas, id: \.id) { resposta in
-                resposta
+                RespostaView(resposta: resposta)
             }
             .listRowSeparator(.hidden)           
             
@@ -50,15 +37,13 @@ struct TelaPergunta: View {
                 } else {
                     TextField("Digite aqui sua resposta", text: $novaResposta, axis: .vertical)
                     Button("Enviar") {
-                        let novaResposta = CardResposta(autor: "Autor", texto: novaResposta, data: Date.now)
-                        TelaPergunta.respostasPerguntaQuimica.append(novaResposta)
-                        if let index = perguntas.firstIndex(where: { $0.id == pergunta.id}) {
-                            perguntas[index].respostas.append(novaResposta)
-                        }
+                        let novaResposta = Resposta(autor: "Autor", texto: novaResposta)
+                        pergunta.respostas.append(novaResposta)
                         
                         self.novaResposta = ""
                         digitandoPergunta = false
                     }
+                    .disabled(novaResposta == "")
                 }
             }
         }
@@ -67,5 +52,5 @@ struct TelaPergunta: View {
 }
 
 #Preview {
-    TelaPergunta()
+    TelaPergunta(pergunta: Pergunta(categoria: .quimica, texto: "Qual o elemento química com 8 prótons?", respostas: [Resposta(autor: "Autor", texto: "Oxigênio")]))
 }

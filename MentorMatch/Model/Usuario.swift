@@ -10,6 +10,6 @@ import SwiftUI
 struct Usuario {
     let nome: String
     var email: String
-    var categoriasSelecionadas: [String] = []
-    var perguntasEnviadas: [String] = []
+    var categoriasSelecionadas: [Categoria] = []
+    var perguntasEnviadas: [Pergunta] = []
 }

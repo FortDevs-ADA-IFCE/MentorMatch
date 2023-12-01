@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Perfil: View {
-    let usuario = Usuario(nome: "Joel Lacerda", email: "joellacerdaol@gmail.com")
+    let usuario = Usuario(nome: "Joel Lacerda", email: "joellacerdaol@gmail.com", perguntasEnviadas: [Pergunta(categoria: .biologia, autor: "Joel Lacerda", texto: "Quantos anos vivem os orangotangos?")])
     
     var body: some View {
         NavigationStack {
@@ -19,7 +19,7 @@ struct Perfil: View {
                 }
                 Section {
                     NavigationLink("Categorias") {
-                        Categorias()
+                        ListaCategorias()
                     }
                 }
                 Section {

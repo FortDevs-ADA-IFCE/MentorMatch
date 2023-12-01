@@ -1,5 +1,5 @@
 //
-//  CardPergunta.swift
+//  PerguntaView.swift
 //  MentorMatch
 //
 //  Created by Joel Lacerda on 07/11/23.
@@ -7,35 +7,29 @@
 
 import SwiftUI
 
-struct CardPergunta: View, Identifiable {
+struct PerguntaView: View, Identifiable {
+    var card: Pergunta
     let id = UUID()
-    let categoria: Categoria
-    let autor: String
-    let texto: String
-    let data: Date = Date.now
-    var respostas: [CardResposta] = []
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
-                Image(systemName: getSimbolo(categoria))
-                Text(getNome(categoria))
-                    .fontWeight(.semibold
-                    )
-                
+                Image(systemName: getSimbolo(card.categoria))
+                Text(getNome(card.categoria))
+                    .fontWeight(.semibold)
             }
             
             HStack {
-                Text(texto)
+                Text(card.texto)
                     .font(.system(size: 22))
                     .fontWeight(.bold)
                     .lineLimit(2)
             }
             
             HStack {
-                Text(data.formatted())
+                Text(card.data.formatted())
                 Spacer()
-                Text(autor)
+                Text(card.autor)
                     .font(.callout)
             }
         }
@@ -48,7 +42,7 @@ struct CardPergunta: View, Identifiable {
             .stroke(.quimica, lineWidth: 3)
             .frame(width: .infinity, height: 150)
             .foregroundColor(.white)
-        CardPergunta(categoria: .quimica, autor: "Joel", texto: "Qual o elemento químico que contém 8 prótons?")
+        PerguntaView(card: Pergunta(categoria: .quimica, autor: "Joel", texto: "Qual o elemento químico que contém 8 prótons?", respostas: []))
             .padding(10)
     }
     .padding(10)

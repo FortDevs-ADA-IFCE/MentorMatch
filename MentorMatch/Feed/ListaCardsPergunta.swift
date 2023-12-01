@@ -6,27 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ListaCardsPergunta: View {
-    static var respostasPerguntaQuimica: [CardResposta] = [
-        CardResposta(autor: "Fulano", texto: "Esse elemento é o oxigênio.", data: Date.now),
-        CardResposta(autor: "Sicrano", texto: "Oxigênio.", data: Date.now),
-        CardResposta(autor: "Beltrano", texto: "\nNova linha\nNova linha\nNova linha\nNova linha.", data: Date.now)
-    ]
-
-    var perguntas: [CardPergunta] = [
-        CardPergunta(categoria: .quimica, autor: "Joel", texto: "Qual o elemento químico que contém 8 prótons?", respostas: respostasPerguntaQuimica),
-        CardPergunta(categoria: .portugues, autor: "Guilherme", texto: "Qual a conjugação do verbo 'agir'?"),
-        CardPergunta(categoria: .matematica, autor: "Melissa", texto: "Como se calcula uma integral?"),
-        CardPergunta(categoria: .historia, autor: "Rafael", texto: "Quem descobriu o Brasil? "),
-        CardPergunta(categoria: .filosofia, autor: "Ana", texto: "Qual é a escola de pensamento de Platão?")
-    ]
+    @Query var perguntas: [Pergunta]
     
     var body: some View {
         List {
             ForEach(perguntas, id: \.id) { pergunta in
-                NavigationLink(destination: TelaPergunta(perguntas: perguntas)) {
-                    pergunta
+                NavigationLink(destination: TelaPergunta(pergunta: pergunta)) {
+                    PerguntaView(card: pergunta)
                 }
                 .listRowSeparator(.hidden)
                 .listRowBackground(

@@ -6,11 +6,19 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct PopQuiz: View {
-    @State var categoriaSelecionada: Categoria = .portugues
-    //TODO: perguntaAleatoria abaixo deve pegar do banco de perguntas uma pergunta qualquer da categoria selecionada
-    @State var perguntaAleatoria: String = "Quais são os pronomes pessoais do caso reto? (exemplo)"
+    @Query var perguntas: [Pergunta]
+    @State private var categoriaSelecionada: Categoria = .portugues
+    @State private var exemploPergunta: String? = "Qual a conjugação do verbo IR?"
+//    @State private var perguntasDaCategoriaSelecionada = perguntas.filter()
+
+    //    @State var perguntasDaCategoriaSelecionada: [CardPergunta] = ListaCardsPergunta.perguntas.filter {
+//            $0.categoria == categoriaSelecionada
+//    }
+//    @State var perguntaAleatoria: String? = perguntasDaCategoriaSelecionada.randomElement()?.texto
+
     @State var resposta: String = ""
     @State private var mostrarAlerta = false
     @FocusState private var isFocused: Bool
@@ -19,13 +27,15 @@ struct PopQuiz: View {
         NavigationStack {
             Form {
                 Picker("Categoria", selection: $categoriaSelecionada) {
-                    ForEach(categorias) { categoria in
+                    ForEach(Categoria.allCases) { categoria in
                         Text(getNome(categoria))
                     }
                 }
                 
                 Section("Pergunta") {
-                    Text(perguntaAleatoria)
+                    Text(exemploPergunta ?? "Não há perguntas com essa categoria ainda.")
+                        .font(.system(size: 22))
+                        .fontWeight(.bold)
                     TextField("Digite aqui sua resposta", text: $resposta, axis: .vertical)
                         .lineLimit(5...10)
                         .focused($isFocused)
