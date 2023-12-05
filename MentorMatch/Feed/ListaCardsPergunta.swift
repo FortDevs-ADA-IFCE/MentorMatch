@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ListaCardsPergunta: View {
-    @Query var perguntas: [Pergunta]
+    @Query(sort: \Pergunta.data, order: .reverse) var perguntas: [Pergunta]
     
     var body: some View {
         List {
@@ -36,10 +36,21 @@ struct ListaCardsPergunta: View {
         }
         .listRowSpacing(10)
     }
+    
+    init(sort: SortDescriptor<Pergunta>, searchString: String) {
+        _perguntas = Query(filter: #Predicate {
+            if searchString.isEmpty {
+                return true
+            } else {
+                return $0.texto.localizedStandardContains(searchString)
+            }
+        }, sort: [sort])
+    }
 }
+
 
 #Preview {
     NavigationStack {
-        ListaCardsPergunta()
+        ListaCardsPergunta(sort: SortDescriptor(\Pergunta.texto), searchString: "")
     }
 }

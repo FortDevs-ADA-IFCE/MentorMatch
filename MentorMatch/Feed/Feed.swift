@@ -6,14 +6,19 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct Feed: View {
     @State private var showingSheet = false
+    @State private var sortOrder =  SortDescriptor(\Pergunta.data, order: .reverse)
+    @State private var searchText = ""
+    @State private var categoriaSelecionada: Categoria? = nil
     
     var body: some View {
         NavigationStack {
-            ListaCardsPergunta()
+            ListaCardsPergunta(sort: sortOrder, searchString: searchText)
             .navigationTitle("Início")
+            .searchable(text: $searchText, prompt: "Buscar pergunta")
             .toolbar {
                 Button {
                     showingSheet.toggle()
@@ -22,6 +27,14 @@ struct Feed: View {
                 }
                 .sheet(isPresented: $showingSheet) {
                     NovaPergunta()
+                }
+                
+                Menu("Filtro", systemImage: "line.3.horizontal.decrease.circle") {
+                    Picker("Categoria", selection: $categoriaSelecionada) {
+                        ForEach(Categoria.allCases) { categoria in
+                            Text(getNome(categoria))
+                        }
+                    }
                 }
             }
         }

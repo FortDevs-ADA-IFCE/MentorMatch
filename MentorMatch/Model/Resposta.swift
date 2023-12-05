@@ -15,7 +15,7 @@ class Resposta: Identifiable {
     let texto: String
     let data: Date
     
-    init(autor: String = "Autor", texto: String, data: Date = .now) {
+    init(autor: String = "Autor da resposta", texto: String, data: Date = .now) {
         self.autor = autor
         self.texto = texto
         self.data = data

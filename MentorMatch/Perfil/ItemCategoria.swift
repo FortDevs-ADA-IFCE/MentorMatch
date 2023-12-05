@@ -17,6 +17,7 @@ struct ItemCategoria: View {
                 .foregroundStyle(isSelected ? .blue : .primary)
             Spacer()
             Image(systemName: getSimbolo(categoria))
+                .symbolRenderingMode(.monochrome)
                 .foregroundStyle(isSelected ? .blue : .primary)
 //                .padding(.trailing, 10)
         }

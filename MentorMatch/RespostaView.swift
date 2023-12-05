@@ -26,10 +26,12 @@ struct RespostaView: View, Identifiable {
                     .fontWeight(.bold)
             }
             
-            HStack {
+            HStack(spacing: 10) {
                 Spacer()
                 Image(systemName: "hand.thumbsup")
+                    .font(.system(size: 22))
                 Image(systemName: "hand.thumbsdown")
+                    .font(.system(size: 22))
             }
         }
     }

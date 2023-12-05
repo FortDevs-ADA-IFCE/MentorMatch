@@ -18,9 +18,9 @@ enum Categoria: Codable, CaseIterable, Identifiable {
     case literatura
     case matematica
     case portugues
+    case programacao
     case quimica
     case sociologia
-    case programacao
     
     var id: Self { self }
 }
@@ -32,9 +32,9 @@ func getInfo(_ categoria: Categoria) -> (String, String, Color) {
     case .matematica:
         return ("Matemática", "x.squareroot", .matematica)
     case .literatura:
-        return ("Literatura", "book", .literatura)
+        return ("Literatura", "theatermasks", .literatura)
     case .historia:
-        return ("História", "hourglass", .historia)
+        return ("História", "book", .historia)
     case .geografia:
         return ("Geografia", "globe", .geografia)
     case .fisica:
@@ -46,11 +46,11 @@ func getInfo(_ categoria: Categoria) -> (String, String, Color) {
     case .filosofia:
         return ("Filosofia", "brain", .filosofia)
     case .sociologia:
-        return ("Sociologia", "person.3", .sociologia)
+        return ("Sociologia", "person.2", .sociologia)
     case .artes:
         return ("Artes", "paintpalette", .artes)
     case .ingles:
-        return ("Inglês", "ellipsis.bubble.fill", .ingles)
+        return ("Inglês", "ellipsis.bubble", .ingles)
     case .programacao:
         return ("Programação", "laptopcomputer", .programacao)
     }

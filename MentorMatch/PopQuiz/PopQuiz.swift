@@ -58,7 +58,7 @@ struct PopQuiz: View {
             }
             .onTapGesture {
                 hideKeyboard()
-        }
+            }
         }
     }
 }
