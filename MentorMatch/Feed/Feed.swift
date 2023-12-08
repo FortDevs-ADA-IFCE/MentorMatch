@@ -20,6 +20,14 @@ struct Feed: View {
             .navigationTitle("Início")
             .searchable(text: $searchText, prompt: "Buscar pergunta")
             .toolbar {
+                Menu("Filtro", systemImage: "line.3.horizontal.decrease.circle") {
+                    Picker("Categoria", selection: $categoriaSelecionada) {
+                        ForEach(Categoria.allCases) { categoria in
+                            Text(getNome(categoria))
+                        }
+                    }
+                }
+                
                 Button {
                     showingSheet.toggle()
                 } label: {
@@ -27,14 +35,6 @@ struct Feed: View {
                 }
                 .sheet(isPresented: $showingSheet) {
                     NovaPergunta()
-                }
-                
-                Menu("Filtro", systemImage: "line.3.horizontal.decrease.circle") {
-                    Picker("Categoria", selection: $categoriaSelecionada) {
-                        ForEach(Categoria.allCases) { categoria in
-                            Text(getNome(categoria))
-                        }
-                    }
                 }
             }
         }

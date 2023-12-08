@@ -49,6 +49,7 @@
 		3C9E68542B07F3EF007EB1B8 /* PerguntaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerguntaView.swift; sourceTree = "<group>"; };
 		3C9E68562B07F41F007EB1B8 /* RespostaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespostaView.swift; sourceTree = "<group>"; };
 		3CACDF8D2B1664870068A8B3 /* Resposta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resposta.swift; sourceTree = "<group>"; };
+		3CE0579B2B238A3C0010B3D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3CEE0C962AF521BA00EA8F03 /* TelaCarregamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaCarregamento.swift; sourceTree = "<group>"; };
 		3CFCFB052B06BC1600DEEBF5 /* ItemCategoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoria.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +84,7 @@
 		3C27DB0C2AF5118C00CFF5B9 /* MentorMatch */ = {
 			isa = PBXGroup;
 			children = (
+				3CE0579B2B238A3C0010B3D6 /* Info.plist */,
 				3C27DB0D2AF5118C00CFF5B9 /* MentorMatchApp.swift */,
 				3CEE0C962AF521BA00EA8F03 /* TelaCarregamento.swift */,
 				3C27DB0F2AF5118C00CFF5B9 /* ContentView.swift */,
@@ -309,6 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -366,6 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -387,9 +391,9 @@
 				DEVELOPMENT_TEAM = Y25NP8JU6C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MentorMatch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -419,9 +423,9 @@
 				DEVELOPMENT_TEAM = Y25NP8JU6C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MentorMatch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (

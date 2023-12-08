@@ -17,15 +17,14 @@ struct NovaPergunta: View {
 
     var body: some View {
         Form {
+            Section("Pergunta") {
+                TextField("Digite aqui sua pergunta", text: $textoDigitado, axis: .vertical)
+            }
+            
             Picker("Categoria", selection: $categoriaSelecionada) {
                 ForEach(Categoria.allCases, id: \.self) { categoria in
                     Text(getNome(categoria))
                 }
-            }
-            
-            Section("Pergunta") {
-                TextField("Digite aqui sua pergunta", text: $textoDigitado, axis: .vertical)
-            
             }
             
             Section {
